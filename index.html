@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio FATEC-SCS</title>
+</head>
+<body>
+    <div class="menu">
+        <nav id="sidebar">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="../html/projetos.html">Projetos</a></li>
+              <li><a href="">A Fatec</a></li>
+              <li><a href="">Contato</a></li>
+              <a href=""><img src="/imgs/insta.png" class="imgNet" alt=""></a>
+              <a href=""><img src="/imgs/tt.png" class="imgNet" alt=""></a>
+              <a href=""><img src="/imgs/git.png" class="imgNet" alt=""></a>
+          </ul>
+      </nav>
+    </div>
+    <div class="content" id="content">
+        <div class="sliders">
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="/imgs/socialtecBanner.jpg" style="width:100%">
+                  <div class="text">A SocialTec é uma rede social exclusiva para alunos da FATEC</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="/imgs/img1.jpg" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+              
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="/imgs/img1.jpg" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+              
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              </div>
+              <br>
+              
+              <!-- The dots/circles -->
+              <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+
+              <script>
+                        let slideIndex = 1;
+                        showSlides(slideIndex);
+
+                        // Next/previous controls
+                        function plusSlides(n) {
+                            showSlides(slideIndex += n);
+                        }
+
+                        // Thumbnail image controls
+                        function currentSlide(n) {
+                            showSlides(slideIndex = n);
+                        }
+
+                        function showSlides(n) {
+                            let i;
+                            let slides = document.getElementsByClassName("mySlides");
+                            let dots = document.getElementsByClassName("dot");
+                            if (n > slides.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = slides.length}
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" active", "");
+                            }
+                            slides[slideIndex-1].style.display = "block";
+                            dots[slideIndex-1].className += " active";
+                        }
+              </script>
+        </div>
+        <hr class="hr-One">
+
+        <div class="presentation">
+            <div class="contentPres">
+              <div class="project">
+                <h1><p>Objetivo do Projeto</p></h1>  
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id unde obcaecati laboriosam aut quam qui quas nisi eius reprehenderit non soluta, modi rem fugit aliquam laborum quisquam blanditiis inventore! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, blanditiis ipsa saepe explicabo mollitia aliquam libero quibusdam. Cumque illum, quos possimus quae et quas animi eveniet doloribus rem natus voluptatum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero quod perspiciatis eveniet expedita nihil porro, vitae, quam beatae nobis natus esse ratione illo tempore necessitatibus nulla est quae! Praesentium, earum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut debitis, sapiente blanditiis temporibus quae, doloribus suscipit nihil quam atque expedita rem! Deleniti autem maiores vitae. Iste voluptates at suscipit vitae.
+                </p>
+              </div>
+              <div class="devs">
+                  <h1><p>Desenvolvedores</p></h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur, commodi impedit atque ab saepe quasi necessitatibus blanditiis voluptatibus quia iure error dignissimos unde corporis doloribus corrupti pariatur fugit maiores? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum, quisquam officia. Aperiam, magnam sapiente. Error esse et id recusandae praesentium culpa saepe aspernatur, sunt, incidunt facere quibusdam odit accusantium veritatis?
+                  </p>
+              </div>
+
+              <div class=""></div>
+            </div>
+        </div>
+    </div>
+    <footer id="footerbar">
+      <p>&copy; Todos os Direitos Reservados</p>
+  </footer>
+</body>
+</html>
